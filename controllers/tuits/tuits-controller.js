@@ -4,12 +4,13 @@ import * as tuitsDao from "../tuits/tuits-dao.js"
 
 const findTuits = async (req, res) => {
   const tuits = await tuitsDao.findTuits()
+  console.log(tuits);
   res.json(tuits);
 }
 const createTuit = async (req, res) => {
   const newTuit = req.body;
   
-  newTuit.likes = 0;
+  newTuit.hearts = 0;
   newTuit.liked = false;
 
   const insertedTuit = await tuitsDao

@@ -10,7 +10,7 @@ import HelloController
   from "./controllers/tuits/tuits-controller.js";
   const CONNECTION_STRING = process.env.DB_CONNECTION_STRING
  || 'mongodb://127.0.0.1:27017/tuiter'
-mongoose.connect('mongodb+srv://renuchava11:Saila*2571@cluster0.jollxbr.mongodb.net/?retryWrites=true&w=majority');
+mongoose.connect('mongodb://127.0.0.1:27017/tuiter');
 
   const app = express()
 app.use(cors())
